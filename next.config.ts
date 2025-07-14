@@ -9,11 +9,6 @@ const nextConfig: NextConfig = {
     formats: ["image/webp", "image/avif"],
   },
 
-  // 성능 최적화
-  experimental: {
-    optimizeCss: true,
-  },
-
   // 압축 활성화
   compress: true,
 };
