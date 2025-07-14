@@ -45,7 +45,7 @@ const ContactSection = () => {
         service: "",
         message: "",
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
