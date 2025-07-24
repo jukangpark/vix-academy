@@ -74,6 +74,55 @@ const ContactSection = () => {
 
       // EmailJS를 사용하여 이메일 전송
       await emailjs.send(serviceId, templateId, templateParams);
+      console.log("이메일 전송 완료");
+
+      // Google Sheets에 데이터 저장
+      const googleSheetsData = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        child_name: formData.childName,
+        child_age: formData.childAge,
+        message: formData.message || "문의 내용이 없습니다.",
+        time: new Date().toLocaleString("ko-KR", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        }),
+      };
+
+      try {
+        // 특정 스프레드시트 ID로 연결 (귀하의 스프레드시트 ID)
+        const sheetsResponse = await fetch(
+          process.env.NEXT_PUBLIC_APPS_SCRIPT_WEB_APP_URL || "",
+          {
+            method: "POST",
+            mode: "no-cors", // CORS 우회
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(googleSheetsData),
+          }
+        );
+
+        if (sheetsResponse.ok) {
+          console.log("Google Sheets 저장 완료");
+        } else {
+          console.warn("Google Sheets 저장 실패:", sheetsResponse.status);
+          // 권한 관련 에러인 경우 사용자에게 안내
+          if (sheetsResponse.status === 403) {
+            console.warn(
+              "Google 권한 승인이 필요할 수 있습니다. 관리자에게 문의하세요."
+            );
+          }
+        }
+      } catch (sheetsError) {
+        console.warn("Google Sheets 저장 중 오류:", sheetsError);
+        // Google Sheets 저장 실패해도 전체 제출은 성공으로 처리
+      }
 
       setSubmitStatus("success");
       setFormData({
