@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
               <div className="flex mb-4">{renderStars(testimonial.rating)}</div>
 
               <p className="text-gray-700 leading-relaxed italic">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
             </div>
           ))}
