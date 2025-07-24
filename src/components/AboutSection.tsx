@@ -18,9 +18,9 @@ const AboutSection = () => {
               <h3 className="text-xl font-semibold">우리의 교육 철학</h3>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              "Play to Learn, Learn to Grow" - 아이들이 놀이를 통해 자연스럽게
-              영어를 습득하고, 학습을 통해 성장할 수 있도록 돕는 것이 우리의
-              교육 철학입니다.
+              &ldquo;Play to Learn, Learn to Grow&rdquo; - 아이들이 놀이를 통해
+              자연스럽게 영어를 습득하고, 학습을 통해 성장할 수 있도록 돕는 것이
+              우리의 교육 철학입니다.
             </p>
 
             <div className="space-y-4">
