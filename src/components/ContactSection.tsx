@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    company: "",
-    service: "",
+    childName: "",
+    childAge: "",
     message: "",
   });
 
@@ -16,6 +17,13 @@ const ContactSection = () => {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+  // EmailJS 초기화
+  useEffect(() => {
+    // EmailJS Public Key - 실제 사용 시 EmailJS에서 받은 키로 교체하세요
+    // 예: emailjs.init("user_abc123def456");
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -31,21 +39,59 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    // 실제 구현에서는 API 호출을 여기에 추가
     try {
-      // 시뮬레이션을 위한 지연
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // EmailJS를 사용하여 이메일 전송
+      const templateParams = {
+        to_email: "skyxxx9339@naver.com",
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        child_name: formData.childName,
+        child_age: formData.childAge,
+        message: formData.message || "문의 내용이 없습니다.",
+        reply_to: formData.email,
+        time: new Date().toLocaleString("ko-KR", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        }),
+      };
+
+      // 환경 변수에서 EmailJS 설정 가져오기
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+
+      if (!serviceId || !templateId) {
+        throw new Error(
+          "EmailJS Service ID 또는 Template ID가 설정되지 않았습니다."
+        );
+      }
+
+      // EmailJS를 사용하여 이메일 전송
+      await emailjs.send(serviceId, templateId, templateParams);
+
       setSubmitStatus("success");
       setFormData({
         name: "",
         email: "",
         phone: "",
-        company: "",
-        service: "",
+        childName: "",
+        childAge: "",
         message: "",
       });
-    } catch {
+    } catch (error) {
+      console.error("Email sending failed:", error);
+
+      // 더 자세한 에러 메시지 표시
+      if (error instanceof Error) {
+        console.error("Error details:", error.message);
+      }
+
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -56,11 +102,9 @@ const ContactSection = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            무료 상담 신청
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">상담 신청</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            전문가와 상담하여 최적의 솔루션을 찾아보세요. 빠른 시일 내에
+            아이의 영어 교육에 대해 전문가와 상담해보세요. 빠른 시일 내에
             연락드리겠습니다.
           </p>
         </div>
@@ -89,7 +133,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold">전화번호</p>
-                    <p className="text-gray-300">02-1234-5678</p>
+                    <p className="text-gray-300">051-123-4567</p>
                   </div>
                 </div>
 
@@ -111,7 +155,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold">이메일</p>
-                    <p className="text-gray-300">contact@company.com</p>
+                    <p className="text-gray-300">info@bixbusan.com</p>
                   </div>
                 </div>
 
@@ -140,7 +184,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-semibold">주소</p>
                     <p className="text-gray-300">
-                      서울특별시 강남구 테헤란로 123
+                      부산광역시 해운대구 센텀중앙로 123
                     </p>
                   </div>
                 </div>
@@ -148,11 +192,21 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-white/10 rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4">상담 시간</h4>
+              <h4 className="text-lg font-semibold mb-4">운영 시간</h4>
               <div className="space-y-2 text-gray-300">
-                <p>평일: 09:00 - 18:00</p>
-                <p>토요일: 09:00 - 13:00</p>
+                <p>평일: 08:00 - 18:00</p>
+                <p>토요일: 08:00 - 14:00</p>
                 <p>일요일 및 공휴일 휴무</p>
+              </div>
+            </div>
+
+            <div className="bg-white/10 rounded-lg p-6">
+              <h4 className="text-lg font-semibold mb-4">무료 체험 안내</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>• 1일 무료 체험 가능</p>
+                <p>• 사전 예약 필수</p>
+                <p>• 체험 후 상담 진행</p>
+                <p>• 입학 결정은 자유</p>
               </div>
             </div>
           </div>
@@ -166,7 +220,7 @@ const ContactSection = () => {
                     htmlFor="name"
                     className="block text-sm font-medium mb-2"
                   >
-                    이름 *
+                    보호자 이름 *
                   </label>
                   <input
                     type="text"
@@ -206,7 +260,7 @@ const ContactSection = () => {
                     htmlFor="phone"
                     className="block text-sm font-medium mb-2"
                   >
-                    전화번호
+                    전화번호 *
                   </label>
                   <input
                     type="tel"
@@ -214,6 +268,7 @@ const ContactSection = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="010-1234-5678"
                   />
@@ -221,45 +276,45 @@ const ContactSection = () => {
 
                 <div>
                   <label
-                    htmlFor="company"
+                    htmlFor="childName"
                     className="block text-sm font-medium mb-2"
                   >
-                    회사명
+                    아이 이름 *
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="childName"
+                    name="childName"
+                    value={formData.childName}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="회사명"
+                    placeholder="김영희"
                   />
                 </div>
               </div>
 
               <div>
                 <label
-                  htmlFor="service"
+                  htmlFor="childAge"
                   className="block text-sm font-medium mb-2"
                 >
-                  관심 서비스
+                  아이 나이 *
                 </label>
                 <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
+                  id="childAge"
+                  name="childAge"
+                  value={formData.childAge}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="">서비스를 선택해주세요</option>
-                  <option value="web">웹 개발</option>
-                  <option value="mobile">모바일 앱</option>
-                  <option value="cloud">클라우드 솔루션</option>
-                  <option value="ai">AI/ML 서비스</option>
-                  <option value="security">보안 솔루션</option>
-                  <option value="data">데이터 분석</option>
-                  <option value="other">기타</option>
+                  <option value="">나이를 선택해주세요</option>
+                  <option value="3세">3세</option>
+                  <option value="4세">4세</option>
+                  <option value="5세">5세</option>
+                  <option value="6세">6세</option>
+                  <option value="7세">7세</option>
                 </select>
               </div>
 
@@ -268,17 +323,16 @@ const ContactSection = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  문의 내용 *
+                  문의 내용
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
                   rows={4}
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="문의하실 내용을 자세히 작성해주세요."
+                  placeholder="궁금한 점이나 특별히 문의하실 내용이 있으시면 작성해주세요."
                 />
               </div>
 

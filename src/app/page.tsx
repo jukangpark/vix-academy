@@ -1,71 +1,42 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import FeaturesSection from "@/components/FeaturesSection";
+import ProgramsSection from "@/components/ProgramsSection";
+import TeachersSection from "@/components/TeachersSection";
+import FacilitiesSection from "@/components/FacilitiesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
-import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services", "features", "contact"];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetBottom = offsetTop + element.offsetHeight;
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <main className="relative">
-      <Navigation activeSection={activeSection} onNavigate={scrollToSection} />
+    <main className="min-h-screen">
+      <Header isScrolled={isScrolled} />
 
-      <div className="w-full">
-        <section id="home">
-          <HeroSection />
-        </section>
+      <HeroSection />
+      <AboutSection />
+      <ProgramsSection />
+      <TeachersSection />
+      <FacilitiesSection />
+      <TestimonialsSection />
+      <ContactSection />
 
-        <section id="about">
-          <AboutSection />
-        </section>
-
-        <section id="services">
-          <ServicesSection />
-        </section>
-
-        <section id="features">
-          <FeaturesSection />
-        </section>
-
-        <section id="contact">
-          <ContactSection />
-        </section>
-      </div>
+      <Footer />
     </main>
   );
 }
