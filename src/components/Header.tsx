@@ -16,7 +16,6 @@ const Header = ({ isScrolled }: HeaderProps) => {
     { name: "홈", href: "/" },
     { name: "소개", href: "/about" },
     { name: "프로그램", href: "/programs" },
-    { name: "교직원", href: "/teachers" },
     { name: "시설", href: "/facilities" },
     { name: "문의", href: "/contact" },
   ];

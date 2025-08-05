@@ -96,14 +96,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/teachers"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  교직원
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/facilities"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
