@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
+import NaverMap from "./NaverMap";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({

@@ -22,17 +22,6 @@ export default function ContactPage() {
     <main className="min-h-screen">
       <Header isScrolled={isScrolled} />
 
-      {/* Page Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">상담 신청</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            아이의 영어 교육에 대해 전문가와 상담해보세요. 빠른 시일 내에
-            연락드리겠습니다.
-          </p>
-        </div>
-      </section>
-
       <ContactSection />
 
       {/* Additional Contact Content */}
@@ -157,12 +146,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <NaverMap
-              latitude={37.483716}
-              longitude={127.0603783}
-              zoom={15}
-              title="빅스 부산캠퍼스"
-            />
+            <NaverMap center={{ lat: 37.483716, lng: 127.0603783 }} zoom={15} />
           </div>
         </div>
       </section>
