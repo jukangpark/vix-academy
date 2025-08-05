@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import NaverMap from "@/components/NaverMap";
 
 export default function ContactPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -156,15 +157,12 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-200 rounded-xl p-8 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🗺️</div>
-                <p className="text-gray-600">지도가 여기에 표시됩니다</p>
-                <p className="text-sm text-gray-500 mt-2">
-                  실제 구현 시 Google Maps 또는 카카오맵 연동
-                </p>
-              </div>
-            </div>
+            <NaverMap
+              latitude={37.483716}
+              longitude={127.0603783}
+              zoom={15}
+              title="빅스 부산캠퍼스"
+            />
           </div>
         </div>
       </section>

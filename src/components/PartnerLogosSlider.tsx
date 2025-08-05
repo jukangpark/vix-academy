@@ -5,7 +5,7 @@ import { useState } from "react";
 const PartnerLogosSlider = () => {
   const [isPaused, setIsPaused] = useState(false);
 
-  // VIXS 로고들을 여러 개 생성
+  // VIX 로고들을 여러 개 생성
   const partnerLogos = Array.from({ length: 12 }, (_, index) => ({
     id: index,
     name: `LOGO ${index + 1}`,
