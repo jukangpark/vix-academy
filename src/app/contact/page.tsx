@@ -146,7 +146,12 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <NaverMap center={{ lat: 37.483716, lng: 127.0603783 }} zoom={15} />
+            <NaverMap
+              latitude={37.483716}
+              longitude={127.0603783}
+              zoom={15}
+              title="빅스 부산캠퍼스"
+            />
           </div>
         </div>
       </section>
