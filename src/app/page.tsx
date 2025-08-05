@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import ProgramsSection from "@/components/ProgramsSection";
 import FacilitiesSection from "@/components/FacilitiesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -31,6 +32,7 @@ export default function Home() {
       <ProgramsSection />
       <FacilitiesSection />
       <TestimonialsSection />
+      <VideoSection />
       <ContactSection />
 
       <Footer />
