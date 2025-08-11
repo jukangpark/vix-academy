@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20">
         <div className="mb-8">
           <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
-            🎓 부산 최고의 영어 유치원
+            🎓 영어 실력, 빅스에서 쑥쑥 자라요!
           </span>
         </div>
 
@@ -23,8 +23,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          빅스 부산캠퍼스는 아이들이 자연스럽게 영어를 습득하고, 창의력과 인성을
-          함께 키워나갈 수 있는 최고의 교육 환경을 제공합니다.
+          동래 최대 규모 영어 유치원, 빅스 부산캠퍼스
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

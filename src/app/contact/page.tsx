@@ -78,8 +78,8 @@ export default function ContactPage() {
                 Q: 급식은 어떻게 제공되나요?
               </h3>
               <p className="text-gray-600">
-                영양사가 계획한 균형 잡힌 점심과 간식을 제공합니다. 알레르기
-                관리도 철저히 합니다.
+                영양사가 친환경 재료로 계획한 균형 잡힌 점심과 간식을
+                제공합니다. 알레르기 관리도 철저히 합니다.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
@@ -101,7 +101,7 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">오시는 길</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              부산광역시 해운대구 센텀중앙로 123에 위치하고 있습니다.
+              부산광역시 동래구 온천장로 119번길 56
             </p>
           </div>
 

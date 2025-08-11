@@ -3,12 +3,12 @@ const AboutSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            빅스 부산캠퍼스 소개
-          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            2010년 설립 이후 부산 지역에서 가장 신뢰받는 영어 유치원으로
-            아이들의 영어 실력과 인성 발달을 함께 이끌어왔습니다.
+            동래구 최대 규모의 국제 영어교육 기관! <br />
+            강남 No. 1 국제학교의 교육 노하우를 그대로 옮긴 부산 캠퍼스
+            강남본원과 동일한 커리큘럼을 바탕으로, 제주국제학교, 대구DIS, 인천
+            CI, CMIS 등<br />
+            국내외 명문 국제학교 진학 연계 프로그램 운영!
           </p>
         </div>
 

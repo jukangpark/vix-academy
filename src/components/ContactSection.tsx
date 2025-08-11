@@ -183,7 +183,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold">전화번호</p>
-                    <p className="text-gray-300">051-123-4567</p>
+                    <p className="text-gray-300">1668-3458</p>
                   </div>
                 </div>
 
@@ -205,7 +205,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold">이메일</p>
-                    <p className="text-gray-300">info@bixbusan.com</p>
+                    <p className="text-gray-300">vixedu@vix.academy</p>
                   </div>
                 </div>
 
@@ -234,7 +234,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-semibold">주소</p>
                     <p className="text-gray-300">
-                      부산광역시 해운대구 센텀중앙로 123
+                      부산광역시 동대구 온천장로 119번길 56
                     </p>
                   </div>
                 </div>
@@ -242,21 +242,11 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-white/10 rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4">운영 시간</h4>
+              <h4 className="text-lg font-semibold mb-4">상담 운영 시간</h4>
               <div className="space-y-2 text-gray-300">
-                <p>평일: 08:00 - 18:00</p>
-                <p>토요일: 08:00 - 14:00</p>
+                <p>평일: 09:30 - 18:00</p>
+                <p>토요일: 08:00 - 14:00 (유선상담)</p>
                 <p>일요일 및 공휴일 휴무</p>
-              </div>
-            </div>
-
-            <div className="bg-white/10 rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-4">무료 체험 안내</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>• 1일 무료 체험 가능</p>
-                <p>• 사전 예약 필수</p>
-                <p>• 체험 후 상담 진행</p>
-                <p>• 입학 결정은 자유</p>
               </div>
             </div>
           </div>

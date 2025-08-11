@@ -15,7 +15,7 @@ const ProgramsSection = () => {
     {
       age: "3-4세",
       title: "Toddler Class",
-      description: "처음 영어를 접하는 아이들을 위한 기초 프로그램",
+      description: "영어를 처음 접하는 아이를 위한 기초 프로그램",
       features: [
         "기본 영어 단어 학습",
         "간단한 영어 노래",
@@ -71,11 +71,8 @@ const ProgramsSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            연령별 맞춤 프로그램
-          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            아이들의 발달 단계에 맞는 체계적인 영어 교육 프로그램을 제공합니다.
+            AGE-SPECIFIC PROGRAMS
           </p>
         </div>
 

@@ -28,8 +28,8 @@ export default function AboutPage() {
             빅스 부산캠퍼스 소개
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            2010년 설립 이후 부산 지역에서 가장 신뢰받는 영어 유치원으로
-            아이들의 영어 실력과 인성 발달을 함께 이끌어왔습니다.
+            부산에서도 강남 수준의 영어교육, <br />
+            이제 빅스 부산캠퍼스에서 경험하세요. <br />
           </p>
         </div>
       </section>
