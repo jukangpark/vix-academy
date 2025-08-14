@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -34,9 +35,7 @@ const Header = ({ isScrolled }: HeaderProps) => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg lg:text-xl">B</span>
-            </div>
+            <Logo />
             <div className="hidden sm:block">
               <h1
                 className={`text-xl lg:text-2xl font-bold ${

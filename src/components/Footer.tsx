@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PartnerLogosSlider from "./PartnerLogosSlider";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">B</span>
-              </div>
+              <Logo />
               <div>
                 <h3 className="text-xl font-bold">빅스 부산캠퍼스</h3>
                 <p className="text-sm text-gray-400">영어 유치원</p>
@@ -117,15 +116,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">연락처</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📞 051-123-4567</p>
-              <p>📧 info@bixbusan.com</p>
-              <p>📍 부산광역시 해운대구</p>
-              <p>센텀중앙로 123</p>
+              <p>📞 1688-3458</p>
+              <p>📧 vixedu@vix.academy</p>
+              <p>📍 부산광역시 동대구 온천장로 119번길 56</p>
             </div>
             <div className="mt-4">
               <h5 className="font-semibold mb-2">운영시간</h5>
-              <p className="text-sm text-gray-300">평일: 08:00 - 18:00</p>
-              <p className="text-sm text-gray-300">토요일: 08:00 - 14:00</p>
+              <p className="text-sm text-gray-300">평일: 09:30 - 18:00</p>
+              <p className="text-sm text-gray-300">
+                토요일: 08:00 - 14:00 (유선상담)
+              </p>
+              <p className="text-sm text-gray-300">일요일 및 공휴일 휴무</p>
             </div>
           </div>
         </div>

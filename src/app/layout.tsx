@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "VIX ACADEMY",
   description: "빅스 부산캠퍼스 - 아이들의 미래를 위한 최고의 영어 교육",
+  icons: {
+    icon: [{ url: "/vix-academy-logo.ico", sizes: "any" }],
+    shortcut: "/vix-academy-logo.ico",
+    apple: "/vix-academy-logo.ico",
+  },
 };
 
 export default function RootLayout({
