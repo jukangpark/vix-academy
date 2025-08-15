@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -40,12 +41,16 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-            무료 체험 신청
-          </button>
-          <button className="border-2 border-gray-300 text-white-700 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all duration-300">
-            프로그램 둘러보기
-          </button>
+          <Link href="/contact">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+              무료 상담 신청
+            </button>
+          </Link>
+          <Link href="/programs">
+            <button className="border-2 border-gray-300 text-white-700 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+              프로그램 둘러보기
+            </button>
+          </Link>
         </div>
 
         {/* Key Features */}
