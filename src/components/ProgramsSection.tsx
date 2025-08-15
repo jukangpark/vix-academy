@@ -71,7 +71,10 @@ const ProgramsSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            연령별 맞춤 프로그램
+          </h2>
+          <p className="text-lg sm:text-xl font-bold text-blue-600 mb-6">
             AGE-SPECIFIC PROGRAMS
           </p>
         </div>

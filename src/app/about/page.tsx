@@ -23,7 +23,7 @@ export default function AboutPage() {
       <Header isScrolled={isScrolled} />
 
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-32 overflow-hidden min-h-[60vh] flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -33,19 +33,7 @@ export default function AboutPage() {
             priority
             width={1920}
             height={1080}
-            style={{ opacity: 0.5 }}
           />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            빅스 부산캠퍼스 소개
-          </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            부산에서도 강남 수준의 영어교육, <br />
-            이제 빅스 부산캠퍼스에서 경험하세요. <br />
-          </p>
         </div>
       </section>
 

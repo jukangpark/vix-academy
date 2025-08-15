@@ -18,7 +18,6 @@ const Header = ({ isScrolled }: HeaderProps) => {
     { name: "소개", href: "/about" },
     { name: "프로그램", href: "/programs" },
     { name: "시설", href: "/facilities" },
-    { name: "문의", href: "/contact" },
   ];
 
   // 헤더는 항상 흰색 배경으로 고정
@@ -45,14 +44,22 @@ const Header = ({ isScrolled }: HeaderProps) => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-medium transition-colors duration-200 text-gray-700 hover:text-blue-600"
+                className={`font-medium transition-colors duration-200 ${
+                  pathname === item.href
+                    ? "text-blue-600"
+                    : "text-gray-700 hover:text-blue-600"
+                }`}
               >
                 {item.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                pathname === "/contact"
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg transform hover:scale-105"
+              }`}
             >
               상담 신청
             </Link>
@@ -96,7 +103,11 @@ const Header = ({ isScrolled }: HeaderProps) => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium"
+                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${
+                    pathname === item.href
+                      ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -104,7 +115,11 @@ const Header = ({ isScrolled }: HeaderProps) => {
               ))}
               <Link
                 href="/contact"
-                className="block mt-4 mx-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-medium text-center"
+                className={`block mt-4 mx-3 px-6 py-2 rounded-full font-medium text-center transition-all duration-200 ${
+                  pathname === "/contact"
+                    ? "bg-blue-600 text-white shadow-lg"
+                    : "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg"
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 상담 신청

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Header from "@/components/Header";
 import ProgramsSection from "@/components/ProgramsSection";
 import Footer from "@/components/Footer";
@@ -22,16 +23,17 @@ export default function ProgramsPage() {
       <Header isScrolled={isScrolled} />
 
       {/* Page Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            연령별 맞춤 프로그램
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            아이들의 발달 단계에 맞는 체계적인 영어 교육 프로그램을 제공합니다.
-            각 연령대별로 최적화된 커리큘럼으로 영어 실력을 단계적으로
-            향상시킵니다.
-          </p>
+      <section className="relative pt-32 pb-32 overflow-hidden min-h-[60vh] flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/program-banner.jpg"
+            alt="Program Banner"
+            className="object-cover w-full h-full"
+            priority
+            width={1920}
+            height={1080}
+          />
         </div>
       </section>
 

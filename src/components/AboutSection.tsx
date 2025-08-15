@@ -2,12 +2,138 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Campus Overview Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            부산 캠퍼스 소개
+          </h2>
+          <p className="text-lg sm:text-xl font-bold text-blue-600 mb-6">
+            부산에서도 강남 수준의 영어교육, 이제 빅스 부산캠퍼스에서
+            경험하세요.
+          </p>
+          <div className="space-y-4 text-lg sm:text-xl text-gray-600">
+            <p>
+              동래구 최대 규모의 국제 영어 교육 기관! <br />
+              강남 No.1 국제학교의 교육 노하우를 그대로 옮긴 부산 캠퍼스
+            </p>
+            <p>
+              강남 본원과 동일한 커리큘럼을 바탕으로, 제주국제학교, 대구DIS,
+              인천 CI, CMIS 등 <br />
+              국내외 명문 국제학교 진학 연계 프로그램 운영!
+            </p>
+          </div>
+        </div>
+        <div className="mb-20">
+          <div className="flex justify-center">
+            <div className="relative w-96 h-96 flex items-center justify-center">
+              {/* Connection Lines - 원 뒤에 배치 */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                <line
+                  x1="50%"
+                  y1="50%"
+                  x2="50%"
+                  y2="12.5%"
+                  stroke="#3B82F6"
+                  strokeWidth="2"
+                  strokeDasharray="5,5"
+                />
+                <line
+                  x1="50%"
+                  y1="50%"
+                  x2="50%"
+                  y2="87.5%"
+                  stroke="#8B5CF6"
+                  strokeWidth="2"
+                  strokeDasharray="5,5"
+                />
+                <line
+                  x1="50%"
+                  y1="50%"
+                  x2="12.5%"
+                  y2="50%"
+                  stroke="#10B981"
+                  strokeWidth="2"
+                  strokeDasharray="5,5"
+                />
+                <line
+                  x1="50%"
+                  y1="50%"
+                  x2="87.5%"
+                  y2="50%"
+                  stroke="#EC4899"
+                  strokeWidth="2"
+                  strokeDasharray="5,5"
+                />
+              </svg>
+
+              {/* Center - 부산캠퍼스 */}
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full w-28 h-28 flex items-center justify-center shadow-lg z-10">
+                <div className="text-center">
+                  <div className="text-base font-bold">부산캠퍼스</div>
+                </div>
+              </div>
+
+              {/* Top - 강남본원 */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
+                <div className="bg-white border-2 border-blue-500 text-blue-600 rounded-full w-28 h-28 flex items-center justify-center shadow-lg">
+                  <div className="text-center">
+                    <div className="text-base font-bold leading-tight">
+                      강남
+                      <br />
+                      본원
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom - 몰입형 영어환경 */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10">
+                <div className="bg-white border-2 border-purple-500 text-purple-600 rounded-full w-28 h-28 flex items-center justify-center shadow-lg">
+                  <div className="text-center">
+                    <div className="text-base font-bold leading-tight">
+                      몰입형
+                      <br />
+                      영어환경
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Left - 전문영어 교육 */}
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+                <div className="bg-white border-2 border-green-500 text-green-600 rounded-full w-28 h-28 flex items-center justify-center shadow-lg">
+                  <div className="text-center">
+                    <div className="text-base font-bold leading-tight">
+                      전문영어
+                      <br />
+                      교육
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right - 국제학교 연맹 */}
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+                <div className="bg-white border-2 border-pink-500 text-pink-600 rounded-full w-28 h-28 flex items-center justify-center shadow-lg">
+                  <div className="text-center">
+                    <div className="text-base font-bold leading-tight">
+                      국제학교
+                      <br />
+                      연맹
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Educational Philosophy Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               교육 철학
-              <span className="block text-lg sm:text-xl font-normal text-blue-600 mt-2">
+              <span className="block text-lg sm:text-xl font-bold text-blue-600 mt-2">
                 EDUCATIONAL PHILOSOPHY
               </span>
             </h2>
@@ -66,7 +192,7 @@ const AboutSection = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               교육 목표
-              <span className="block text-lg sm:text-xl font-normal text-blue-600 mt-2">
+              <span className="block text-lg sm:text-xl font-bold text-blue-600 mt-2">
                 EDUCATIONAL OBJECTIVES
               </span>
             </h2>
