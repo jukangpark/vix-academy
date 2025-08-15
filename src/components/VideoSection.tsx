@@ -16,7 +16,7 @@ const VideoSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <YouTubeVideo
-              videoId="jIbU7OBMwgo"
+              videoId="f14MmRNFoUs"
               title="빅스 부산캠퍼스 소개 영상"
               className="mb-8"
             />
