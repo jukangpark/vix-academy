@@ -5,6 +5,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 export default function AboutPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,9 +36,14 @@ export default function AboutPage() {
             height={1080}
           />
         </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
       </section>
 
-      <AboutSection />
+      <AnimatedSection delay={0.3}>
+        <AboutSection />
+      </AnimatedSection>
 
       <Footer />
     </main>

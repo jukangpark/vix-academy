@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,13 +28,27 @@ export default function Home() {
     <main className="min-h-screen">
       <Header isScrolled={isScrolled} />
 
-      <HeroSection />
-      <AboutSection />
-      <ProgramsSection />
-      <FacilitiesSection />
-      <TestimonialsSection />
-      <VideoSection />
-      <ContactSection />
+      <AnimatedSection>
+        <HeroSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.2}>
+        <AboutSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.4}>
+        <ProgramsSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.6}>
+        <FacilitiesSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.8}>
+        <TestimonialsSection />
+      </AnimatedSection>
+      <AnimatedSection delay={1.0}>
+        <VideoSection />
+      </AnimatedSection>
+      <AnimatedSection delay={1.2}>
+        <ContactSection />
+      </AnimatedSection>
 
       <Footer />
     </main>

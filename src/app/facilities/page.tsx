@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Header from "@/components/Header";
 import FacilitiesSection from "@/components/FacilitiesSection";
 import Footer from "@/components/Footer";
@@ -22,16 +23,17 @@ export default function FacilitiesPage() {
       <Header isScrolled={isScrolled} />
 
       {/* Page Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            최신 시설 소개
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            아이들이 안전하고 편안하게 학습할 수 있는 최신 시설을 갖추고
-            있습니다. 모든 시설은 아이들의 안전과 교육 효과를 최우선으로
-            설계되었습니다.
-          </p>
+      <section className="relative pt-32 pb-32 overflow-hidden min-h-[60vh] flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/facilities-banner.jpg"
+            alt="Facilities Banner"
+            className="object-cover w-full h-full"
+            priority
+            width={1920}
+            height={1080}
+          />
         </div>
       </section>
 
