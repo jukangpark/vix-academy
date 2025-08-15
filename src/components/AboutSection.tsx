@@ -2,138 +2,172 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            동래구 최대 규모의 국제 영어교육 기관! <br />
-            강남 No. 1 국제학교의 교육 노하우를 그대로 옮긴 부산 캠퍼스
-            강남본원과 동일한 커리큘럼을 바탕으로, 제주국제학교, 대구DIS, 인천
-            CI, CMIS 등<br />
-            국내외 명문 국제학교 진학 연계 프로그램 운영!
-          </p>
-        </div>
+        {/* Educational Philosophy Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              교육 철학
+              <span className="block text-lg sm:text-xl font-normal text-blue-600 mt-2">
+                EDUCATIONAL PHILOSOPHY
+              </span>
+            </h2>
+          </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-4 rounded-lg inline-block">
-              <h3 className="text-xl font-semibold">우리의 교육 철학</h3>
-            </div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              &ldquo;Play to Learn, Learn to Grow&rdquo; - 아이들이 놀이를 통해
-              자연스럽게 영어를 습득하고, 학습을 통해 성장할 수 있도록 돕는 것이
-              우리의 교육 철학입니다.
-            </p>
-
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
-                  <svg
-                    className="w-3 h-3 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    자연스러운 영어 습득
-                  </h4>
-                  <p className="text-gray-600">
-                    놀이와 일상 활동을 통해 영어를 자연스럽게 배웁니다.
-                  </p>
-                </div>
+          <div className="grid gap-12 items-center">
+            <div className="space-y-6">
+              <div className="px-6 py-4 rounded-lg w-fit mx-auto">
+                <h3 className="text-2xl font-bold">
+                  <span className="text-orange-500">S</span>
+                  <span className="text-yellow-500">T</span>
+                  <span className="text-green-500">E</span>
+                  <span className="text-purple-500">A</span>
+                  <span className="text-sky-500">M</span>
+                </h3>
               </div>
+              <p className="text-lg text-gray-700 leading-relaxed mx-auto w-fit">
+                창의성과 융합적 사고를 키우는 STEAM 교육
+              </p>
 
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mt-1">
-                  <svg
-                    className="w-3 h-3 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+              {/* STEAM Components */}
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+                <div className="text-center p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🔬</div>
+                  <div className="font-semibold text-orange-500">Science</div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    창의력과 인성 발달
-                  </h4>
-                  <p className="text-gray-600">
-                    영어 교육과 함께 창의력과 바른 인성을 키워갑니다.
-                  </p>
+                <div className="text-center p-4 rounded-lg">
+                  <div className="text-2xl mb-2">💻</div>
+                  <div className="font-semibold text-yellow-500">
+                    Technology
+                  </div>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-6 h-6 bg-pink-600 rounded-full flex items-center justify-center mt-1">
-                  <svg
-                    className="w-3 h-3 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                <div className="text-center p-4 rounded-lg">
+                  <div className="text-2xl mb-2">⚙️</div>
+                  <div className="font-semibold text-green-500">
+                    Engineering
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    안전한 학습 환경
-                  </h4>
-                  <p className="text-gray-600">
-                    아이들이 안전하고 편안하게 학습할 수 있는 환경을 제공합니다.
-                  </p>
+                <div className="text-center p-4 rounded-lg">
+                  <div className="text-2xl mb-2">📐</div>
+                  <div className="font-semibold text-purple-500">
+                    Mathematics
+                  </div>
+                </div>
+                <div className="text-center p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🎨</div>
+                  <div className="font-semibold text-sky-500">Arts</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
-                    2010
-                  </div>
-                  <div className="text-gray-600">설립년도</div>
+        {/* Educational Objectives Section */}
+        <div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              교육 목표
+              <span className="block text-lg sm:text-xl font-normal text-blue-600 mt-2">
+                EDUCATIONAL OBJECTIVES
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              창의적이고 자신감 있는 글로벌 인재로 성장하도록 돕습니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Communication */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">💬</span>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">
-                    15+
-                  </div>
-                  <div className="text-gray-600">교육 경험</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-pink-600 mb-2">
-                    500+
-                  </div>
-                  <div className="text-gray-600">졸업생</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-600 mb-2">
-                    98%
-                  </div>
-                  <div className="text-gray-600">부모 만족도</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">의사소통 능력</h3>
+                  <p className="text-sm text-blue-600">Communication</p>
                 </div>
               </div>
+              <p className="text-gray-600">
+                자연스러운 영어 의사소통 능력 향상
+              </p>
             </div>
 
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-200 rounded-full flex items-center justify-center">
-              <span className="text-2xl">⭐</span>
+            {/* Creativity */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">🎨</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">창의성</h3>
+                  <p className="text-sm text-purple-600">Creativity</p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                창의적인 사고력과 문제해결 능력 개발
+              </p>
             </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-200 rounded-full flex items-center justify-center">
-              <span className="text-xl">🎨</span>
+
+            {/* Critical Thinking */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">🧠</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">비판적 사고</h3>
+                  <p className="text-sm text-green-600">Critical Thinking</p>
+                </div>
+              </div>
+              <p className="text-gray-600">논리적 판단과 분석 능력 향상</p>
+            </div>
+
+            {/* Social Skills */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-pink-500 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">🤝</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">사회성과 협력</h3>
+                  <p className="text-sm text-pink-600">
+                    Social Skills & Teamwork
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                타인과 함께하는 협력과 배려심 향상
+              </p>
+            </div>
+
+            {/* Self-directed Learning */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-500 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">자기주도 학습</h3>
+                  <p className="text-sm text-yellow-600">
+                    Self-directed Learning
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600">자신감과 긍정적 자아개념 형성</p>
+            </div>
+
+            {/* Global Perspective */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigo-500 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">🌍</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">글로벌 시각</h3>
+                  <p className="text-sm text-indigo-600">Global Perspective</p>
+                </div>
+              </div>
+              <p className="text-gray-600">세계 문화에 대한 이해와 존중</p>
             </div>
           </div>
         </div>
