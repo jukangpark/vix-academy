@@ -21,36 +21,21 @@ const Header = ({ isScrolled }: HeaderProps) => {
     { name: "문의", href: "/contact" },
   ];
 
-  // Contact 페이지에서는 어두운 배경이므로 흰색 텍스트 사용
-  const isContactPage = pathname === "/contact";
-  const isDarkBackground = isContactPage && !isScrolled;
+  // 헤더는 항상 흰색 배경으로 고정
+  const isDarkBackground = false;
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Logo />
             <div className="hidden sm:block">
-              <h1
-                className={`text-xl lg:text-2xl font-bold ${
-                  isDarkBackground ? "text-white" : "text-gray-900"
-                }`}
-              >
+              <h1 className="text-xl lg:text-2xl font-bold text-gray-900">
                 빅스 부산캠퍼스
               </h1>
-              <p
-                className={`text-sm ${
-                  isDarkBackground ? "text-gray-300" : "text-gray-600"
-                }`}
-              >
-                영어 유치원
-              </p>
+              <p className="text-sm text-gray-600">영어 유치원</p>
             </div>
           </Link>
 
@@ -60,11 +45,7 @@ const Header = ({ isScrolled }: HeaderProps) => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${
-                  isDarkBackground
-                    ? "text-gray-200 hover:text-white"
-                    : "text-gray-700 hover:text-blue-600"
-                }`}
+                className="font-medium transition-colors duration-200 text-gray-700 hover:text-blue-600"
               >
                 {item.name}
               </Link>
@@ -80,11 +61,7 @@ const Header = ({ isScrolled }: HeaderProps) => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 rounded-md focus:outline-none transition-colors duration-200 ${
-              isDarkBackground
-                ? "text-gray-200 hover:text-white"
-                : "text-gray-700 hover:text-blue-600"
-            }`}
+            className="lg:hidden p-2 rounded-md focus:outline-none transition-colors duration-200 text-gray-700 hover:text-blue-600"
           >
             <svg
               className="w-6 h-6"
