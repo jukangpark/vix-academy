@@ -6,7 +6,6 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProgramsSection from "@/components/ProgramsSection";
 import FacilitiesSection from "@/components/FacilitiesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -39,9 +38,6 @@ export default function Home() {
       </AnimatedSection>
       <AnimatedSection delay={0.6}>
         <FacilitiesSection />
-      </AnimatedSection>
-      <AnimatedSection delay={0.8}>
-        <TestimonialsSection />
       </AnimatedSection>
       <AnimatedSection delay={1.0}>
         <VideoSection />

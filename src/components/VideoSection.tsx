@@ -6,7 +6,7 @@ const VideoSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            빅스 부산캠퍼스 소개
+            프로그램 소개
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             우리 유치원의 교육 환경과 프로그램을 영상으로 만나보세요
@@ -17,7 +17,7 @@ const VideoSection = () => {
           <div>
             <YouTubeVideo
               videoId="f14MmRNFoUs"
-              title="빅스 부산캠퍼스 소개 영상"
+              title="프로그램 소개 영상"
               className="mb-8"
             />
           </div>
