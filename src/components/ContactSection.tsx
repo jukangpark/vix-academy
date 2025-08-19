@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
-import NaverMap from "./NaverMap";
+import Image from "next/image";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -149,8 +149,20 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 text-white overflow-hidden mt-10">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/상담신청 뒷배경이미지.png"
+          alt="상담신청 배경"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/70"></div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">상담 신청</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
