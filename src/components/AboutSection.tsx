@@ -1,27 +1,14 @@
+import SubTitle from "./SubTitle";
+import Title from "./Title";
+
 const AboutSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Campus Overview Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            부산 캠퍼스 소개
-          </h2>
-          <p className="text-lg sm:text-xl font-bold text-blue-600 mb-6">
-            부산에서도 강남 수준의 영어교육, 이제 빅스 부산캠퍼스에서
-            경험하세요.
-          </p>
-          <div className="space-y-4 text-lg sm:text-xl text-gray-600">
-            <p>
-              동래구 최대 규모의 국제 영어 교육 기관! <br />
-              강남 No.1 국제학교의 교육 노하우를 그대로 옮긴 부산 캠퍼스
-            </p>
-            <p>
-              강남 본원과 동일한 커리큘럼을 바탕으로, 제주국제학교, 대구DIS,
-              인천 CI, CMIS 등 <br />
-              국내외 명문 국제학교 진학 연계 프로그램 운영!
-            </p>
-          </div>
+          <Title text="부산 캠퍼스 소개" />
+          <SubTitle text="부산에서도 강남 수준의 영어교육, 이제 빅스 부산캠퍼스에서 경험하세요." />
         </div>
         <div className="mb-20">
           <div className="flex justify-center">
@@ -126,17 +113,25 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
+
+          <div className="space-y-4 text-lg sm:text-xl text-gray-600 text-center mt-10">
+            <p>
+              동래구 최대 규모의 국제 영어 교육 기관! <br />
+              강남 No.1 국제학교의 교육 노하우를 그대로 옮긴 부산 캠퍼스
+            </p>
+            <p>
+              강남 본원과 동일한 커리큘럼을 바탕으로, 제주국제학교, 대구DIS,
+              인천 CI, CMIS 등 <br />
+              국내외 명문 국제학교 진학 연계 프로그램 운영!
+            </p>
+          </div>
         </div>
 
         {/* Educational Philosophy Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              교육 철학
-              <span className="block text-lg sm:text-xl font-bold text-blue-600 mt-2">
-                EDUCATIONAL PHILOSOPHY
-              </span>
-            </h2>
+            <Title text="교육 철학" />
+            <SubTitle text="EDUCATIONAL PHILOSOPHY" />
           </div>
 
           <div className="grid gap-12 items-center">
@@ -150,9 +145,9 @@ const AboutSection = () => {
                   <span className="text-sky-500">M</span>
                 </h3>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed mx-auto w-fit">
-                창의성과 융합적 사고를 키우는 STEAM 교육
-              </p>
+              <div className="text-center">
+                <SubTitle text="창의성과 융합적 사고를 키우는 STEAM 교육" />
+              </div>
 
               {/* STEAM Components */}
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
@@ -190,15 +185,9 @@ const AboutSection = () => {
         {/* Educational Objectives Section */}
         <div>
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              교육 목표
-              <span className="block text-lg sm:text-xl font-bold text-blue-600 mt-2">
-                EDUCATIONAL OBJECTIVES
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              창의적이고 자신감 있는 글로벌 인재로 성장하도록 돕습니다.
-            </p>
+            <Title text="교육 목표" />
+            <SubTitle text="EDUCATIONAL OBJECTIVES" />
+            <SubTitle text="창의적이고 자신감 있는 글로벌 인재로 성장하도록 돕습니다." />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
