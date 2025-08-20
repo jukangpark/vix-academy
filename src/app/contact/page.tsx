@@ -101,7 +101,7 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">오시는 길</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              부산광역시 동래구 온천장로 119번길 56
+              부산광역시 동대구 온천장로 119번길 56
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">지하철</h4>
                     <p className="text-gray-600 text-sm">
-                      2호선 센텀시티역 3번 출구에서 도보 5분
+                      1호선 온천장역 1번출구에서 도보 10분
                     </p>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">버스</h4>
                     <p className="text-gray-600 text-sm">
-                      센텀시티 정류장 하차 (100번, 200번, 300번)
+                      온천시장 정류장 하차 (77번, 110번, 121번, 1002번)
                     </p>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">자가용</h4>
                     <p className="text-gray-600 text-sm">
-                      건물 내 지하주차장 이용 가능 (2시간 무료)
+                      건물 내 지하주차장 이용 가능
                     </p>
                   </div>
                 </div>

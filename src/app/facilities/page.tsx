@@ -59,7 +59,7 @@ export default function FacilitiesPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 건물 면적
               </h3>
-              <p className="text-2xl font-bold text-blue-600 mb-1">500㎡</p>
+              <p className="text-2xl font-bold text-blue-600 mb-1">2300m2</p>
               <p className="text-gray-600 text-sm">넓고 쾌적한 학습 공간</p>
             </div>
             <div className="text-center">
@@ -67,10 +67,12 @@ export default function FacilitiesPage() {
                 <span className="text-2xl">👶</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                수용 인원
+                학생수용인원
               </h3>
-              <p className="text-2xl font-bold text-purple-600 mb-1">80명</p>
-              <p className="text-gray-600 text-sm">적정 규모의 소규모 운영</p>
+              <p className="text-2xl font-bold text-purple-600 mb-1">140명</p>
+              <p className="text-gray-600 text-sm">
+                학생수용인원 140명 (학생당 교사 비율 7:1)
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -79,8 +81,10 @@ export default function FacilitiesPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 교실 수
               </h3>
-              <p className="text-2xl font-bold text-pink-600 mb-1">8개</p>
-              <p className="text-gray-600 text-sm">연령별 전용 교실</p>
+              <p className="text-2xl font-bold text-pink-600 mb-1">17개</p>
+              <p className="text-gray-600 text-sm">
+                연령 별 전용교실 및 대형활동교실
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

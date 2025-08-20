@@ -116,7 +116,7 @@ const AboutSection = () => {
 
           <div className="space-y-4 text-lg sm:text-xl text-gray-600 text-center mt-10">
             <p>
-              동래구 최대 규모의 국제 영어 교육 기관! <br />
+              동대구 최대 규모의 국제 영어 교육 기관! <br />
               강남 No.1 국제학교의 교육 노하우를 그대로 옮긴 부산 캠퍼스
             </p>
             <p>

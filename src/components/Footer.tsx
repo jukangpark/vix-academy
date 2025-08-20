@@ -75,14 +75,6 @@ const Footer = () => {
                   시설
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  문의
-                </Link>
-              </li>
             </ul>
           </div>
 
