@@ -82,7 +82,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">연락처</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📞 1688-3458</p>
+              <p>📞 1668-3458</p>
               <p>📧 vixedu@vix.academy</p>
               <p>📍 부산광역시 동대구 온천장로 119번길 56</p>
             </div>

@@ -141,8 +141,8 @@ const AboutSection = () => {
                   <span className="text-orange-500">S</span>
                   <span className="text-yellow-500">T</span>
                   <span className="text-green-500">E</span>
-                  <span className="text-purple-500">A</span>
-                  <span className="text-sky-500">M</span>
+                  <span className="text-sky-500">A</span>
+                  <span className="text-purple-500">M</span>
                 </h3>
               </div>
               <div className="text-center">
@@ -168,14 +168,14 @@ const AboutSection = () => {
                   </div>
                 </div>
                 <div className="text-center p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🎨</div>
+                  <div className="font-semibold text-sky-500">Arts</div>
+                </div>
+                <div className="text-center p-4 rounded-lg">
                   <div className="text-2xl mb-2">📐</div>
                   <div className="font-semibold text-purple-500">
                     Mathematics
                   </div>
-                </div>
-                <div className="text-center p-4 rounded-lg">
-                  <div className="text-2xl mb-2">🎨</div>
-                  <div className="font-semibold text-sky-500">Arts</div>
                 </div>
               </div>
             </div>

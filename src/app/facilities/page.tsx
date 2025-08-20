@@ -186,10 +186,6 @@ export default function FacilitiesPage() {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-700">유치원 설립 인가</span>
-                  <span className="font-semibold text-blue-600">✅</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span className="text-gray-700">건축물 안전 검사</span>
                   <span className="font-semibold text-purple-600">✅</span>
                 </div>
