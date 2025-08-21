@@ -25,6 +25,8 @@ const PartnerLogosSlider = () => {
     },
     { id: 6, name: "팽글", src: "/programs/팽글.png", alt: "팽글" },
     { id: 7, name: "피카그램", src: "/programs/피카그램.PNG", alt: "피카그램" },
+    { id: 8, name: "Main Logo", src: "/main_logo.png", alt: "Main Logo" },
+    { id: 9, name: "Sub Logo", src: "/sub_logo.png", alt: "Sub Logo" },
   ];
 
   // 로고들을 반복해서 충분한 개수 만들기
