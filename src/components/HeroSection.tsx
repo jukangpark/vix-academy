@@ -37,7 +37,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg sm:text-xl text-white-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          동래 최대 규모 영어 유치원, 빅스 부산캠퍼스
+          동래 최대 규모 영어 유치부, 빅스 부산캠퍼스
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

@@ -13,7 +13,7 @@ const NaverMap = ({
   longitude,
   zoom = 15,
   title = "빅스 부산캠퍼스",
-  address = "부산광역시 해운대구 센텀중앙로 123",
+  address = "부산광역시 동래구 온천장로 119번길 56",
 }: NaverMapProps) => {
   // 네이버 지도 URL 생성
   const getNaverMapUrl = () => {

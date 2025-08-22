@@ -14,7 +14,7 @@ const Footer = () => {
               <Logo />
               <div>
                 <h3 className="text-xl font-bold">빅스 부산캠퍼스</h3>
-                <p className="text-sm text-gray-400">영어 유치원</p>
+                <p className="text-sm text-gray-400">영어 유치부</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
@@ -84,7 +84,7 @@ const Footer = () => {
             <div className="space-y-2 text-gray-300">
               <p>📞 1668-3458</p>
               <p>📧 vixedu@vix.academy</p>
-              <p>📍 부산광역시 동대구 온천장로 119번길 56</p>
+              <p>📍 부산광역시 동래구 온천장로 119번길 56</p>
             </div>
             <div className="mt-4">
               <h5 className="font-semibold mb-2">운영시간</h5>

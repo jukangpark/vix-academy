@@ -101,7 +101,7 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">오시는 길</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              부산광역시 동대구 온천장로 119번길 56
+              부산광역시 동래구 온천장로 119번길 56
             </p>
           </div>
 

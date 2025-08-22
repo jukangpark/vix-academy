@@ -246,7 +246,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-semibold">주소</p>
                     <p className="text-gray-300">
-                      부산광역시 동대구 온천장로 119번길 56
+                      부산광역시 동래구 온천장로 119번길 56
                     </p>
                   </div>
                 </div>

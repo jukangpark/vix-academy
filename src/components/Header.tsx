@@ -31,7 +31,7 @@ const Header = ({ isScrolled }: HeaderProps) => {
               <h1 className="text-xl lg:text-2xl font-bold text-gray-900">
                 빅스 부산캠퍼스
               </h1>
-              <p className="text-sm text-gray-600">영어 유치원</p>
+              <p className="text-sm text-gray-600">영어 유치부</p>
             </div>
           </Link>
 
