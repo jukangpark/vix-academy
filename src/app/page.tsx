@@ -10,6 +10,7 @@ import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import PopupModal from "@/components/PopupModal";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,6 +48,8 @@ export default function Home() {
       </AnimatedSection>
 
       <Footer />
+
+      <PopupModal />
     </main>
   );
 }
