@@ -48,10 +48,10 @@ export default function PopupModal() {
         {/* 팝업 이미지 */}
         <div className="w-full cursor-pointer" onClick={handlePopupClick}>
           <Image
-            src="/팝업창.jpg"
+            src="/팝업창.png"
             alt="VIX Academy 입학설명회"
             width={650}
-            height={750}
+            height={650}
             className="w-full h-auto rounded-t-lg max-w-full"
             priority
           />
